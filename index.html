@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脂肪：储存、运输与那些"好胆固醇"的真相 · 代谢互动实验室</title>
+<style>
+:root{
+  --teal:#0f766e; --teal-deep:#115e59; --teal-light:#e4f4f1; --teal-mid:#99d5cc;
+  --ink:#24303a; --muted:#64748b; --bg:#f4f7f7; --card:#ffffff; --line:#e2e8e8;
+  --amber:#9a5b0c; --amber-bg:#fdf6e7; --amber-line:#f3dfb3;
+  --violet:#5b21b6; --violet-bg:#f4efff;
+  --blue:#1d4ed8; --blue-bg:#eef4ff;
+  --green:#15803d; --green-bg:#eefaf1;
+  --red:#b91c1c; --red-bg:#fdecec;
+  --gold:#b45309; --gold-deep:#92400e; --gold-bg:#fdf7ec; --gold-mid:#e5c78a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px}
+.topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:10px}
+.topbar .logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#b45309,#f59e0b);
+  color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none}
+.topbar b{font-size:15px}
+.topbar .sub{color:var(--muted);font-size:12.5px;margin-left:2px}
+.layout{display:flex;max-width:1180px;margin:0 auto;gap:30px;padding:26px 20px 80px}
+nav.sidebar{width:225px;flex:none;position:sticky;top:72px;align-self:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px}
+nav.sidebar .st{font-size:12px;color:var(--muted);padding:2px 12px 8px;letter-spacing:2px}
+nav.sidebar a{display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:9px;
+  color:var(--ink);text-decoration:none;font-size:13.8px;transition:.15s}
+nav.sidebar a:hover{background:var(--gold-bg)}
+nav.sidebar a.active{background:var(--gold-bg);color:var(--gold-deep);font-weight:600}
+nav.sidebar a .n{width:20px;height:20px;flex:none;border-radius:6px;background:#eef1f1;color:var(--muted);
+  font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+nav.sidebar a.active .n{background:var(--gold);color:#fff}
+main{flex:1;min-width:0;max-width:800px}
+section{margin-bottom:52px;scroll-margin-top:76px}
+.hero{background:linear-gradient(135deg,#92400e 0%,#d97706 55%,#f59e0b 100%);border-radius:18px;
+  color:#fff;padding:38px 36px 34px;box-shadow:0 10px 30px -12px rgba(146,64,14,.45)}
+.hero h1{margin:0 0 10px;font-size:28px;letter-spacing:.5px}
+.hero p{margin:0 0 18px;color:#fdeeda;font-size:15.5px;max-width:600px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px}
+.hero .chips span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);
+  padding:3px 13px;border-radius:99px;font-size:12.5px}
+h2{display:flex;align-items:center;gap:12px;font-size:22px;margin:0 0 6px;letter-spacing:.5px}
+h2 .cn{width:34px;height:34px;flex:none;border-radius:10px;background:var(--gold);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}
+.sec-sub{color:var(--muted);font-size:14px;margin:0 0 18px;padding-left:46px}
+h3{font-size:17.5px;margin:30px 0 10px;color:var(--gold-deep);display:flex;align-items:center;gap:8px}
+h3::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--gold);display:inline-block;flex:none}
+p{margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0}
+.tip,.pit,.ex,.do,.sci{border-radius:12px;padding:13px 16px 13px 14px;margin:14px 0;font-size:15px;border:1px solid}
+.tip{background:var(--blue-bg);border-color:#c9dbfa}
+.pit{background:var(--amber-bg);border-color:var(--amber-line)}
+.ex{background:var(--violet-bg);border-color:#e0d3fb}
+.do{background:var(--green-bg);border-color:#bfe8cc}
+.sci{background:#f4f1ea;border-color:#e3d9c6}
+.tip b,.pit b,.ex b,.do b,.sci b{display:block;margin-bottom:3px;font-size:14.5px}
+.tip b{color:var(--blue)} .pit b{color:var(--amber)} .ex b{color:var(--violet)}
+.do b{color:var(--green)} .sci b{color:#6b5618}
+.tbl-wrap{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;
+  font-size:14px;box-shadow:0 0 0 1px var(--line)}
+th{background:var(--gold-bg);color:var(--gold-deep);text-align:left;padding:9px 13px;font-size:13.5px;white-space:nowrap}
+td{padding:9px 13px;border-top:1px solid #eef2f2;vertical-align:top}
+tr:nth-child(even) td{background:#fafcfb}
+.formula{background:#fdfcf8;border:1px dashed var(--gold-mid);border-radius:12px;text-align:center;
+  padding:14px 10px;margin:14px 0;font-size:17px;font-weight:600;color:var(--gold-deep);letter-spacing:1px}
+.formula small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:0}
+.widget{background:linear-gradient(180deg,#ffffff,#fdf8ee);border:1.5px solid var(--gold-mid);
+  border-radius:14px;padding:18px 20px;margin:18px 0;box-shadow:0 6px 18px -12px rgba(146,64,14,.35)}
+.w-head{font-weight:700;color:var(--gold);font-size:15.5px;margin-bottom:2px}
+.w-desc{font-size:13.8px;color:var(--muted);margin:0 0 10px}
+.widget svg text{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.w-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 4px}
+.wbtn{border:1.5px solid var(--gold);background:#fff;color:var(--gold);border-radius:10px;
+  padding:6px 15px;font-size:13.5px;cursor:pointer;font-family:inherit;transition:.15s}
+.wbtn:hover{background:var(--gold);color:#fff}
+.wbtn.primary{background:var(--gold);color:#fff}
+.wbtn.w-tab.active{background:var(--gold);color:#fff}
+.wbtn:disabled{opacity:.45;cursor:default}
+.ctrl{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:14px;flex-wrap:wrap}
+.ctrl label{min-width:150px;font-weight:600}
+.ctrl .val{font-family:Consolas,monospace;color:var(--gold);font-weight:700;min-width:90px}
+input[type=range]{accent-color:var(--gold);flex:1;min-width:140px;max-width:340px}
+.w-stat{background:#fff;border:1px dashed var(--gold-mid);border-radius:10px;padding:8px 14px;font-size:14px;margin:8px 0}
+.w-stat b{color:var(--gold-deep)}
+.w-note{font-size:13.5px;background:var(--blue-bg);border-radius:10px;padding:8px 14px;margin-top:10px}
+.w-note b{color:var(--blue)}
+.big-num{font-size:36px;font-weight:800;color:var(--gold);font-family:Consolas,monospace;line-height:1.2}
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0}
+.quiz .qt{font-weight:600;margin-bottom:10px}
+.quiz .opt{display:block;width:100%;text-align:left;background:#f8fafa;border:1.5px solid var(--line);
+  border-radius:10px;padding:9px 14px;margin:7px 0;cursor:pointer;font-size:14.5px;font-family:inherit;color:var(--ink);transition:.15s}
+.quiz .opt:hover{border-color:var(--gold)}
+.quiz .opt.right{background:var(--green-bg);border-color:#4caf6d;color:var(--green);font-weight:600}
+.quiz .opt.right::after{content:" ✓";font-weight:800}
+.quiz .opt.wrong{background:var(--red-bg);border-color:#e08585;color:var(--red)}
+.quiz .opt.wrong::after{content:" ✗";font-weight:800}
+.quiz .exp{display:none;background:var(--blue-bg);border-radius:10px;padding:10px 14px;font-size:14px;margin-top:8px}
+.quiz.done .opt{cursor:default;pointer-events:none}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:920px){
+  .layout{flex-direction:column}
+  nav.sidebar{position:static;width:auto;display:flex;flex-wrap:wrap;gap:2px;padding:8px}
+  nav.sidebar .st{width:100%;padding-bottom:2px}
+  nav.sidebar a{padding:6px 10px;font-size:13px}
+  .hero{padding:26px 22px}
+  h2 .cn{width:30px;height:30px}
+  .sec-sub{padding-left:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">脂</div>
+  <b>脂肪代谢互动实验室</b><span class="sub">储存、运输与血脂的真相 · 写给营养与医学学习者</span>
+</div>
+
+<div class="layout">
+<nav class="sidebar">
+  <div class="st">目 录</div>
+  <a href="#intro" class="active"><span class="n">0</span>大局观 · 脂肪不是敌人</a>
+  <a href="#digest"><span class="n">1</span>消化吸收 · 乳化的艺术</a>
+  <a href="#lipoprotein"><span class="n">2</span>脂蛋白快递系统</a>
+  <a href="#balance"><span class="n">3</span>储存与动员 · 减肥天平</a>
+  <a href="#fats"><span class="n">4</span>膳食脂肪酸科学</a>
+  <a href="#myth"><span class="n">5</span>辟谣 · 科研前沿</a>
+  <a href="#quiz"><span class="n">6</span>自测一下</a>
+</nav>
+
+<main>
+
+<section id="intro">
+  <div class="hero">
+    <h1>脂肪：最高效的电池 + 最勤奋的快递网</h1>
+    <p>1 克脂肪 = 9 千卡（糖和蛋白的 2 倍多）——它是身体首选的储能方案，也是每个细胞膜的建材。但脂肪怎么消化？为什么它"绕过肝先走淋巴"？LDL/HDL 到底是什么？这一站全部讲透。</p>
+    <div class="chips"><span>消化流水线</span><span>脂蛋白快递图</span><span>减肥天平</span><span>食用油档案</span><span>随堂自测</span></div>
+  </div>
+
+  <h2 style="margin-top:34px"><span class="cn">0</span>大局观：脂肪家族三兄弟</h2>
+  <p class="sec-sub">预计 10 分钟 · "脂肪"其实指三类完全不同的东西</p>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>家族</th><th>结构</th><th>功能</th><th>体检单上的身影</th></tr>
+    <tr><td><b>甘油三酯（TG）</b></td><td>1 个甘油 + 3 个脂肪酸</td><td><b>储能主力</b>（皮下/内脏脂肪）+ 供能</td><td>甘油三酯那一行（↑ 与胰腺炎、代谢综合征相关）</td></tr>
+    <tr><td><b>磷脂</b></td><td>甘油 + 2 脂肪酸 + 磷酸头</td><td><b>所有细胞膜</b>的骨架（双分子层）</td><td>—"磷脂"不常单查</td></tr>
+    <tr><td><b>胆固醇</b></td><td>四个环的固醇结构</td><td>膜的"刚度调节器" + 合成胆汁酸、维生素 D、类固醇激素（皮质醇、性激素）的原料</td><td>总胆固醇、LDL-C、HDL-C（↑LDL 与动脉粥样硬化相关）</td></tr>
+  </table></div>
+
+  <div class="tip"><b>💡 直觉理解：为什么能量偏偏选脂肪囤？</b>
+  单位对比：1g 脂肪 ≈ 9 kcal，且<b>储存时不结合水</b>（1g 糖原要带 ~3g 水）。同样 8000 kcal，脂肪约 1kg，糖原要 10kg+——进化选了"充电宝密度之王"。代价是动员慢：脂肪供能需氧气、过程繁琐（所以高强度冲刺靠糖，静息与耐力靠脂肪）。</div>
+
+  <div class="do"><b>🧪 别再"谈脂色变"——脂肪的每日刚需</b>
+  膳食脂肪供能占比建议 20%~30%（中国居民膳食指南）。它提供<b>必需脂肪酸</b>（亚油酸 ω6、α-亚麻酸 ω3——人体无法合成）、脂溶性维生素 A/D/E/K 的载体、以及饱腹感。目标是"吃对种类"，不是"一刀切不吃"。</div>
+</section>
+
+<section id="digest">
+  <h2><span class="cn">1</span>消化吸收：乳化的艺术（油不溶于水怎么吸收？）</h2>
+  <p class="sec-sub">预计 25 分钟 · 脂肪消化是"三器官接力 + 一条专属高速"</p>
+
+  <p>脂肪的最大难题：<b>它不溶于水</b>，而整个消化道是"水世界"。解决方案是<b>乳化</b>（大油滴拆成小油滴）+ <b>水溶性酶从表面进攻</b>。看流水线：</p>
+
+  <div class="widget">
+    <div class="w-head">🧪 互动实验室：脂肪消化流水线（逐步走）</div>
+    <p class="w-desc">以一口红烧肉为例，六站旅程——注意最后两站与糖、蛋白的巨大差异。</p>
+    <svg id="digSvg" viewBox="0 0 620 210"></svg>
+    <div class="w-row">
+      <button class="wbtn" id="digPrev">← 上一步</button>
+      <button class="wbtn primary" id="digNext">下一步 →</button>
+      <button class="wbtn" id="digReset">↺ 重置</button>
+      <span class="w-stat" style="margin:0" id="digStep"></span>
+    </div>
+    <div class="w-stat" id="digText"></div>
+    <div class="w-note">👉 <b>脂肪消化的记忆锚点：口腔少量（舌脂肪酶）→ 胃少量（胃脂肪酶）→ 真正主力在小肠（胆汁乳化 + 胰脂肪酶）</b>。婴儿是例外：母乳脂肪酶 + 舌脂肪酶让婴儿的脂肪消化在口胃就高效开张。</div>
+  </div>
+
+  <div class="ex"><b>📋 最大的解剖学彩蛋：脂肪不走门静脉，先走淋巴！</b>
+  葡萄糖和氨基酸吸收后经门静脉<b>第一站直达肝</b>；而长链脂肪在肠上皮重新组装成<b>乳糜微粒（CM）</b>，从<b>淋巴系统</b>走——经胸导管在锁骨下静脉才汇入血液，<b>绕过了肝的第一站检查</b>。这就是为什么吃完大餐几小时后血液呈"乳白色"（乳糜血）：CM 个头巨大、浓度高。例外：中短链脂肪酸（椰子油、奶脂中较多）不走淋巴，直接入门静脉进肝。</div>
+
+  <div class="tip"><b>💡 胆囊的角色：肝生产，胆囊"点射"</b>
+  胆汁酸由<b>肝</b>合成、<b>胆囊</b>浓缩储存。看到脂肪进十二指肠 → 胆囊收缩把胆汁"点射"出去（乳化）。所以<b>长期不吃早餐/长期极低脂饮食 → 胆汁淤积 → 胆结石风险上升</b>——"减肥不吃油"反而可能吃出胆结石。胆囊切除术后依然能消化脂肪，只是失去了"集中点射"，大油大肉更容易腹胀腹泻。</div>
+</section>
+
+<section id="lipoprotein">
+  <h2><span class="cn">2</span>脂蛋白快递系统：LDL/HDL 到底是什么</h2>
+  <p class="sec-sub">预计 25 分钟 · 体检单上最重要的四个字母</p>
+
+  <p>脂肪和胆固醇不溶于血液（也是水环境），所以身体给它们套上"蛋白质外壳"变成水溶快递——<b>脂蛋白</b>。四种快递车，路线和职责完全不同：</p>
+
+  <div class="widget">
+    <div class="w-head">🧪 互动实验室：四种脂蛋白快递车</div>
+    <p class="w-desc">点选查看每种脂蛋白的"装货、路线、卸货与体检意义"。</p>
+    <div class="w-row" id="lpBtns" style="margin-bottom:6px"></div>
+    <div class="w-stat" id="lpDetail" style="min-height:110px"></div>
+    <div class="w-note">👉 关键逻辑链：<b>"坏"的不是胆固醇本身，而是"往血管壁送货的次数"</b>——LDL 颗粒停留越久、越多（尤其被氧化后），越容易被血管壁巨噬细胞吞成泡沫细胞 → 动脉斑块。HDL 则反向把胆固醇运回肝（逆向转运）。<b>ApoB（每颗致动脉粥样硬化脂蛋白各含 1 个）被认为是比 LDL-C 更准的风险计数指标</b>——科研与高端体检越来越看它。</div>
+  </div>
+
+  <div class="sci"><b>🔬 动脉粥样硬化五步（科研视角，教科书级）</b>
+  ① 血管内皮损伤（高血压/吸烟/高血糖）→ ② LDL 渗入内膜并被氧化 → ③ 巨噬细胞吞噬氧化 LDL 变成<b>泡沫细胞</b> → ④ 平滑肌迁移、纤维帽形成（斑块）→ ⑤ 斑块破裂 → 血栓 → 心梗/卒中。降 LDL 的所有手段（他汀、依折麦布、PCSK9 抑制剂、生活方式）本质都在减少第②③步的"送货量"。</div>
+
+  <div class="tip"><b>💡 读体检单的三个升级技巧</b>
+  ① 看 <b>TG</b>：对碳水（尤其果糖、酒精）极其敏感——TG 高先反思饮料与酒；② 看 <b>LDL-C / ApoB</b>：对饱和脂肪与反式脂肪敏感；③ <b>HDL 高不无限护体</b>：药物强行拉高 HDL 的临床试验屡次失败，HDL 是"伴随指标"而非单独的治疗靶点（功能比数量重要，科研前沿正在研究"好的 HDL 功能"）。</div>
+</section>
+
+<section id="balance">
+  <h2><span class="cn">3</span>储存与动员：减肥天平的生理学</h2>
+  <p class="sec-sub">预计 25 分钟 · "燃烧脂肪"四个字的完整版</p>
+
+  <div class="widget">
+    <div class="w-head">🧪 互动实验室：脂肪天平（摄入 vs 消耗）</div>
+    <p class="w-desc">拖动两个滑块，看身体处于"囤积"还是"动员"状态，以及对应的激素与酶。</p>
+    <div class="ctrl"><label>膳食热量摄入</label><input type="range" id="balIn" min="1200" max="3500" step="50" value="2400"><span class="val" id="balInVal">2400 kcal</span></div>
+    <div class="ctrl"><label>每日总消耗</label><input type="range" id="balOut" min="1400" max="3200" step="50" value="2200"><span class="val" id="balOutVal">2200 kcal</span></div>
+    <svg id="balSvg" viewBox="0 0 620 250"></svg>
+    <div class="w-stat" id="balStat"></div>
+    <div class="w-note">👉 激素总开关：<b>胰岛素高（餐后）= 储存模式</b>（抑制脂解）；<b>胰岛素低（空腹/运动中）= 脂肪动员开放</b>（激素敏感性脂肪酶 HSL 上岗）。这就是"两餐间隔 + 运动"对减脂的结构性意义——不是玄学，是激素开关。</div>
+  </div>
+
+  <div class="card">
+    <p style="margin-top:0"><b>动员出来的脂肪酸去哪了？（β-氧化主干线）</b></p>
+    <p style="font-size:15px">脂肪细胞脂解 → 游离脂肪酸入血 → 靶细胞（肌肉/肝）→ 肉碱穿梭进线粒体（<b>肉碱 = "线粒体门禁卡"</b>）→ <b>β-氧化</b>切下二碳单元 → 生成乙酰 CoA → 进 TCA 循环 → 大量产 ATP。<b>肝的特殊性</b>：肝内乙酰 CoA 过剩时转向生成<b>酮体</b>（β-羟基丁酸、乙酰乙酸）——给大脑的"替代燃料"（大脑不吃脂肪酸，但吃酮体）。这就是生酮饮食起效的生化路径，也是"饥饿一两天后脑子反而清醒"的原因。</p>
+  </div>
+
+  <div class="grid">
+    <div class="mini"><b>减肥的真相一句话</b><div class="eg">热量差是必要条件（天平原理），但<b>蛋白质摄入 + 抗阻训练</b>决定减掉的是脂肪还是肌肉。只饿练不 → 掉肌肉 → 基础代谢下降 → 反弹。</div></div>
+    <div class="mini"><b>脂肪组织是内分泌器官</b><div class="eg">脂肪细胞分泌<b>瘦素</b>（告诉大脑"存粮够了"，缺乏→暴食；肥胖者常见瘦素抵抗——水平高但大脑"听不见"）与<b>脂联素</b>（增敏抗炎，肥胖时反而降低）。内脏脂肪尤其"惹事"——它直接门静脉入肝。</div></div>
+  </div>
+
+  <div class="pit"><b>⚠️ 常见坑</b>
+  ① "运动 30 分钟后才烧脂肪"——不准确：脂肪始终在供能（比例随强度变化），<b>总量</b>才是关键；② "局部减脂"——脂肪动员是全身性的，仰卧起坐不减肚子；③ "出汗=减脂"——汗是水，不是脂肪"液化流出"；④ 生酮初期掉的体重大半是糖原结合水（1g 糖原带 3g 水），别误判为"燃脂神速"。</div>
+</section>
+
+<section id="fats">
+  <h2><span class="cn">4</span>膳食脂肪酸科学：选油的底层逻辑</h2>
+  <p class="sec-sub">预计 25 分钟 · 按脂肪酸类型说话，不按"油的名字"说话</p>
+
+  <div class="widget">
+    <div class="w-head">🧪 互动实验室：食用油与脂肪档案</div>
+    <p class="w-desc">点选查看每种油/脂肪的脂肪酸构成、对血脂的影响与适用场景。</p>
+    <div class="w-row" id="oilBtns" style="margin-bottom:6px"></div>
+    <div class="w-stat" id="oilDetail" style="min-height:110px"></div>
+    <div class="w-note">👉 读档案先看三类脂肪酸的"性格"：<b>饱和脂肪</b>（无双键，稳定，↑LDL）｜<b>单不饱和（MUFA）</b>（1 个双键，中性偏友好，橄榄油主角）｜<b>多不饱和（PUFA）</b>（多个双键，含必需脂肪酸 ω6/ω3，降 TG 但易氧化怕高温）。<b>反式脂肪最差</b>（↑LDL 还 ↓HDL）——来自部分氢化油：植脂末、代可可脂、反复煎炸油。</div>
+  </div>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>关键词</th><th>一句话科学结论（按证据强度）</th></tr>
+    <tr><td>必需脂肪酸</td><td><b>亚油酸（ω6）与 α-亚麻酸（ω3）人体无法合成，必须从膳食获取</b>——这是"脂肪是必需营养素"的根基</td></tr>
+    <tr><td>ω3（EPA/DHA）</td><td>深海鱼油——<b>降 TG 的证据最强</b>（高剂量处方级用于高 TG）；心血管一级预防证据以"吃鱼"形式最稳</td></tr>
+    <tr><td>ω6 与 ω3 比例</td><td>现代膳食 ω6 过多（大豆油/坚果油），理想比例争议大，实用建议：<b>多吃深海鱼和亚麻籽，比纠结比例更有意义</b></td></tr>
+    <tr><td>饱和脂肪</td><td>↑LDL 证据明确（肥肉、黄油、椰子油、棕榈油）；建议 &lt; 总热量 10%，用不饱和脂肪替换而非用精制碳水替换（替换对象很重要！）</td></tr>
+    <tr><td>膳食胆固醇</td><td>对血胆固醇影响<b>因人而异</b>（"高应答者"与"低应答者"）；美国 2015 指南已取消 300mg 硬上限；健康人每天 1 个鸡蛋完全 OK（蛋黄的胆碱、叶黄素都是好东西）</td></tr>
+    <tr><td>反式脂肪</td><td><b>没有任何安全下限</b>——心血管风险证据最一致的"最差脂肪"；配料表警惕"氢化植物油/植脂末/代可可脂"</td></tr>
+    <tr><td>反复煎炸油</td><td>氧化产物与极性化合物累积（与肠道炎症、高血压相关）——家庭用油"煎炸一次就换"不过分</td></tr>
+  </table></div>
+
+  <div class="do"><b>🧪 厨房实操清单</b>
+  ① 凉拌/低温：初榨橄榄油、亚麻籽油（<b>亚麻籽油只适合凉拌</b>，ω3 怕热）；② 一般炒菜：精炼橄榄油、花生油、菜籽油；③ 每周 2 次深海鱼（三文鱼/鲭鱼/沙丁鱼）替代红肉；④ 每天原味坚果一小把（≈10g，指南每周 50~70g）；⑤ 少点外卖油炸与"看不见的反式脂肪"（奶茶植脂末、酥皮点心）。</div>
+</section>
+
+<section id="myth">
+  <h2><span class="cn">5</span>辟谣速查 · 科研前沿</h2>
+  <p class="sec-sub">预计 12 分钟 · 被问最多的四个问题</p>
+
+  <div class="card">
+    <p style="margin-top:0"><b>Q1：吃脂肪就会长脂肪？</b><br>
+    不成立。脂肪储存的根本驱动是<b>总热量盈余 + 胰岛素环境</b>，不是"脂肪分子进了身体"。低碳水高脂饮食（生酮）中脂肪摄入很高，体脂照样下降——但注意：长期依从性、血脂反应个体差异与膳食纤维不足是其短板。</p>
+    <p><b>Q2：生酮饮食是减脂神器吗？</b><br>
+    短期（3~6 月）减重效果与低脂饮食相当或略优（机制：食欲下降+糖原水流失）；长期（≥1 年）优势消失，且执行难度高、部分人 LDL 明显升高。作为治疗工具（难治性癫痫）历史最久、证据最硬；作为大众减肥法，<b>可短期尝试，不建议盲目长期</b>，有血脂异常/肝病/胰腺炎史者需医生评估。</p>
+    <p><b>Q3：橄榄油多多益善？</b><br>
+    橄榄油是"优质的选择"，但仍是 9 kcal/g——用"多吃好油"替代"减少总热量"，体重照样涨。"好脂肪"的意思是<b>替换</b>坏脂肪，不是<b>追加</b>。</p>
+    <p style="margin-bottom:0"><b>Q4：胆固醇高是不是蛋吃多了？</b><br>
+    大多数人对膳食胆固醇反应平缓（肝脏会自己调节产量）。血 LDL 升高更应排查：饱和脂肪、反式脂肪、精制碳水、肥胖与遗传（家族性高胆固醇血症）。每天 1 个鸡蛋的大规模队列证据总体安心。</p>
+  </div>
+
+  <div class="sci"><b>🔬 这个领域正在研究什么（选题雷达）</b>
+  ① <b>脂质组学</b>：血液数百种脂质分子的精细画像与疾病预测（远超"TG+胆固醇"三件套）；② <b>棕色/米色脂肪</b>：成人棕色脂肪激活与产热减脂（冷暴露、药物靶点）；③ <b>脂肪因子的下游</b>：瘦素抵抗的神经机制、脂联素模拟物；④ <b>omega-3 个体化反应</b>：基因型决定补鱼油的效果差异；⑤ <b>CM 残粒与残余风险</b>：降 LDL 之后仍有心血管残余风险，CM/VLDL 残粒（ApoC-III 线）是新靶点；⑥ 乳糜血与<b>餐后高脂血症</b>的血管内皮效应（营养学 × 心血管交叉点）。</div>
+</section>
+
+<section id="quiz">
+  <h2><span class="cn">6</span>自测一下</h2>
+  <p class="sec-sub">6 道题，点选项立即判分并给讲解。</p>
+
+  <div class="quiz"><div class="qt">1. 长链脂肪吸收后进入血液的路径是：</div>
+    <button class="opt">肠上皮 → 门静脉 → 肝</button>
+    <button class="opt" data-ok="1">肠上皮组装成乳糜微粒 → 淋巴 → 胸导管 → 锁骨下静脉</button>
+    <button class="opt">直接扩散进入毛细血管</button>
+    <button class="opt">经胆汁排回肠道再吸收</button>
+    <div class="exp">✅ 长链脂肪走"淋巴高速"，绕过肝的第一站检查（这与糖、蛋白经门静脉直达肝完全不同）。中短链脂肪酸是例外，直接入门静脉。</div>
+  </div>
+
+  <div class="quiz"><div class="qt">2. 脂肪消化的第一步"乳化"是谁完成的？</div>
+    <button class="opt" data-ok="1">胆汁酸（把大油滴拆成小油滴微团）</button>
+    <button class="opt">胰脂肪酶</button>
+    <button class="opt">胃酸</button>
+    <button class="opt">乳糜微粒</button>
+    <div class="exp">✅ 胆汁酸负责"乳化"（物理拆小增大表面积），胰脂肪酶随后"化学切割"。注意胆汁酶不是酶——它本身不分解脂肪，只负责乳化。</div>
+  </div>
+
+  <div class="quiz"><div class="qt">3. 关于 LDL 和 HDL，正确的说法是：</div>
+    <button class="opt">LDL 是"坏"的，应该越低越好，最好为零</button>
+    <button class="opt">HDL 高就绝对安全，无需看其他指标</button>
+    <button class="opt" data-ok="1">LDL 负责把胆固醇运往外周（过高致动脉粥样硬化），HDL 负责逆向运回肝</button>
+    <button class="opt">两者都是胆固醇，功能相同</button>
+    <div class="exp">✅ 胆固醇本身是细胞膜与激素的原料，问题在"运输系统失衡"。LDL（尤其氧化后）沉积血管壁是斑块核心；HDL 逆向转运。LDL 不能为零（生理必需），HDL 高也不是免死金牌。</div>
+  </div>
+
+  <div class="quiz"><div class="qt">4. 空腹 48 小时后，大脑的主要替代燃料是：</div>
+    <button class="opt">脂肪酸（大脑直接燃烧脂肪）</button>
+    <button class="opt" data-ok="1">酮体（肝把脂肪酸转成的"脑用替代燃料"）</button>
+    <button class="opt">氨基酸直接供能</button>
+    <button class="opt">乳酸</button>
+    <div class="exp">✅ 大脑不能直接烧长链脂肪酸（过不了血脑屏障），但能烧酮体。长期饥饿/生酮时，酮体可覆盖大脑约 2/3 的能量需求，减少葡萄糖消耗与肌肉蛋白分解。</div>
+  </div>
+
+  <div class="quiz"><div class="qt">5. 下列哪种脂肪对血脂最不利，且没有安全下限？</div>
+    <button class="opt">单不饱和脂肪酸（橄榄油）</button>
+    <button class="opt">ω3 多不饱和脂肪酸（深海鱼）</button>
+    <button class="opt" data-ok="1">反式脂肪酸（部分氢化油）</button>
+    <button class="opt">中链脂肪酸（椰子油）</button>
+    <div class="exp">✅ 反式脂肪 ↑LDL 还 ↓HDL，证据最一致。ω3 反而是降 TG 的好手。配料表上的"氢化植物油/植脂末/代可可脂"是主要来源。</div>
+  </div>
+
+  <div class="quiz"><div class="qt">6. 肥胖者常见"瘦素抵抗"，意思是：</div>
+    <button class="opt">身体缺乏瘦素，不知道存了多少脂肪</button>
+    <button class="opt" data-ok="1">瘦素水平很高，但大脑对信号不敏感，食欲依然旺盛</button>
+    <button class="opt">瘦素把脂肪转化成了肌肉</button>
+    <button class="opt">瘦素只存在于瘦人体内</button>
+    <div class="exp">✅ 肥胖者脂肪多→瘦素分泌多，但下丘脑"信号通路失灵"（抵抗）→ 大脑误以为"还在饥饿"。这也是"单纯靠意志力少吃"在生理上很艰难的原因之一。</div>
+  </div>
+</section>
+
+<footer>本站为教学用简化模型，示意图不构成个体医疗建议 · 血脂异常请咨询医生与临床营养师 · 用 ZCode 生成 · 2026</footer>
+
+</main>
+</div>
+
+<script>
+function $id(x){return document.getElementById(x);}
+// ================= 1. 消化流水线 =================
+const DIG=[
+ {t:'口腔 · 少量开工',e:'舌脂肪酶分解少量脂肪（成人占比很小）；咀嚼主要是把肉"物理撕碎"增大表面积。婴儿例外——母乳+舌脂肪酶让口胃阶段就高效消化脂肪。'},
+ {t:'胃 · 少量接力',e:'胃脂肪酶酸环境开工，消化约 10~30%（乳与蛋黄较好）。总体而言：胃对脂肪依然是"预处理车间"。'},
+ {t:'十二指肠 · 乳化',e:'脂肪刺激胆囊收缩，胆汁酸"点射"入肠——把大油滴乳化成微团（表面积暴增）。没有这一步，胰脂肪酶"够不着"油的核心。'},
+ {t:'酶解',e:'胰脂肪酶把甘油三酯拆成 2-单甘酯 + 2 个游离脂肪酸；磷脂酶处理磷脂；胆固醇酯酶处理胆固醇酯。产物够小，才能被微团"摆渡"到肠壁。'},
+ {t:'入上皮 · 重组打包',e:'产物扩散进肠上皮细胞，长链脂肪酸在这里<b>重新组装回甘油三酯</b>，套上蛋白外壳打包成<b>乳糜微粒（CM）</b>——身体最强的"防油渗漏"方案。'},
+ {t:'淋巴高速 · 绕过肝',e:'CM 无法钻进毛细血管，走<b>淋巴系统</b>：肠淋巴 → 胸导管 → 锁骨下静脉汇入血液。绕过肝第一站（与糖、蛋白完全不同！），数小时后血液呈乳白色即 CM 高峰。'}
+];
+let digIdx=0;
+function digDraw(){
+  let h='';
+  h+='<line x1="20" y1="105" x2="600" y2="105" stroke="#f0e6d2" stroke-width="3"/>';
+  const xs=[30,126,222,318,414,510], cs=['#b45309','#d97706','#f59e0b','#e8952f','#c2540a','#92400e'];
+  const names=['口腔','胃','乳化','酶解','重组','淋巴'];
+  DIG.forEach((s,i)=>{
+    const x=xs[i],done=i<digIdx,cur=i===digIdx;
+    h+='<rect x="'+x+'" y="67" width="84" height="34" rx="8" fill="'+((cur||done)?cs[i]:'#f0e8d8')+'" opacity="'+(cur?'1':(done?'0.5':'0.9'))+'"/>';
+    h+='<text x="'+(x+42)+'" y="89" text-anchor="middle" font-size="12.5" fill="'+(cur?'#fff':(done?'#fff':'#c4b49a'))+'" font-weight="700">'+(i+1)+'</text>';
+    h+='<text x="'+(x+42)+'" y="165" text-anchor="middle" font-size="12" fill="'+(cur?'#b45309':(done?'#64748b':'#c2b6a0'))+'">'+names[i]+'</text>';
+  });
+  h+='<text x="310" y="200" text-anchor="middle" font-size="13" fill="#64748b">'+DIG[digIdx].t+'</text>';
+  $id('digStep').innerHTML='<b>'+(digIdx+1)+' / 6</b>';
+  $id('digText').innerHTML=DIG[digIdx].e;
+  $id('digPrev').disabled=digIdx===0;
+  $id('digNext').disabled=digIdx===DIG.length-1;
+  $id('digSvg').innerHTML=h;
+}
+$id('digNext').addEventListener('click',()=>{if(digIdx<DIG.length-1){digIdx++;digDraw();}});
+$id('digPrev').addEventListener('click',()=>{if(digIdx>0){digIdx--;digDraw();}});
+$id('digReset').addEventListener('click',()=>{digIdx=0;digDraw();});
+digDraw();
+
+// ================= 2. 脂蛋白快递 =================
+const LP=[
+ {n:'乳糜微粒 CM',d:'<b>肠道的出口快递</b>：装货=膳食脂肪（大量 TG）；路线=肠上皮→淋巴→血液；卸货=沿途毛细血管的脂蛋白脂肪酶（LPL）逐步拆 TG 供给组织。个头最大，餐后浓度高→"乳糜血"。半衰期短（分钟级），空腹 12h 后抽血就几乎没有了——这就是血脂检查要空腹的原因之一。',c:'#d97706'},
+ {n:'VLDL',d:'<b>肝脏的出口快递</b>：肝把自产脂肪（多余碳水/果糖转的 TG、脂肪肝库存）打包成 VLDL 输出。卸货后体积缩小变成 IDL → LDL。⚠️ <b>碳水（尤其果糖）和酒精吃得越多，肝产 VLDL 越多，TG 越高</b>——降 TG 先戒饮料和酒。',c:'#c2540a'},
+ {n:'LDL（"坏"）',d:'<b>送货上门的车</b>：把胆固醇送到各组织修补细胞膜。问题在于它容易滞留在受损血管壁、被氧化、被巨噬细胞吞成泡沫细胞→斑块。 LDL 越多=往血管壁"送货次数"越多。他汀等所有降脂治疗本质都在减少这台车的数量（ApoB 计数是更精细的指标）。',c:'#b91c1c'},
+ {n:'HDL（"好"）',d:'<b>回收车</b>：从外周组织回收多余胆固醇运回肝处理（逆向转运），还有抗炎抗氧化辅助功能。运动、戒烟、减重能提升 HDL；药物强拉 HDL 的试验多次失败——<b>它是健康生活的伴随指标，不是单打独斗的靶点</b>。',c:'#15803d'}
+];
+const lpBtns=$id('lpBtns');
+LP.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.className='wbtn'+(i===0?' w-tab active':'');
+  b.textContent=s.n.split('（')[0];
+  b.addEventListener('click',()=>{
+    lpBtns.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lpShow(i);
+  });
+  lpBtns.appendChild(b);
+});
+function lpShow(i){
+  const s=LP[i];
+  $id('lpDetail').innerHTML='<b style="color:'+s.c+'">'+s.n+'</b><br><span style="font-size:13.5px">'+s.d+'</span>';
+}
+lpShow(0);
+
+// ================= 3. 脂肪天平 =================
+function balDraw(){
+  const din=+$id('balIn').value, dout=+$id('balOut').value;
+  $id('balInVal').textContent=din+' kcal';
+  $id('balOutVal').textContent=dout+' kcal';
+  const diff=din-dout;
+  let h='';
+  // 天平支点
+  h+='<line x1="310" y1="60" x2="310" y2="200" stroke="#b45309" stroke-width="4"/>';
+  h+='<circle cx="310" cy="205" r="10" fill="#92400e"/>';
+  const ang=diff===0?0:(diff>0?Math.min(18,diff/60):Math.max(-18,diff/60));
+  h+='<g transform="rotate('+ang+' 310 60)">';
+  h+='<line x1="130" y1="60" x2="490" y2="60" stroke="#92400e" stroke-width="5"/>';
+  h+='<circle cx="130" cy="98" r="26" fill="#fff" stroke="#b45309" stroke-width="2.5"/>';
+  h+='<text x="130" y="94" text-anchor="middle" font-size="11.5" fill="#92400e">摄入</text>';
+  h+='<text x="130" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#24303a">'+din+'</text>';
+  h+='<circle cx="490" cy="98" r="26" fill="#fff" stroke="#15803d" stroke-width="2.5"/>';
+  h+='<text x="490" y="94" text-anchor="middle" font-size="11.5" fill="#15803d">消耗</text>';
+  h+='<text x="490" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#24303a">'+dout+'</text>';
+  h+='</g>';
+  $id('balSvg').innerHTML=h;
+  const perWeek=Math.abs(diff)*7/7700;
+  let status;
+  if(diff>150)status='<b style="color:#c2540a">囤积模式</b>：胰岛素为主，LPL 活跃、HSL 受抑 → 脂肪净储存。理论增重 ≈ <b>+'+perWeek.toFixed(2)+' kg/周</b>';
+  else if(diff<-150)status='<b style="color:#15803d">动员模式</b>：胰岛素走低，HSL 上岗 → 脂肪被脂解、β-氧化供能。理论减重 ≈ <b>-'+perWeek.toFixed(2)+' kg/周</b>';
+  else status='<b>平衡模式</b>：储存与动员大致相抵。想动天平，任一端 300~500 kcal 的持续变化都会见效';
+  $id('balStat').innerHTML='当前：'+status+'<br><span style="font-size:12.5px;color:#64748b">换算基准：7700 kcal ≈ 1 kg 脂肪（粗略），模型忽略适应性与水波动</span>';
+}
+$id('balIn').addEventListener('input',balDraw);
+$id('balOut').addEventListener('input',balDraw);
+balDraw();
+
+// ================= 4. 油类档案 =================
+const OILS=[
+ {n:'初榨橄榄油',d:'MUFA≈73%（单不饱和主角），多酚丰富。<b>凉拌/低温烹炒</b>首选；对心血管的队列证据以"地中海饮食整体模式"最扎实（PREDIMED 试验）。'},
+ {n:'亚麻籽油',d:'α-亚麻酸（植物 ω3）≈50%+，是植物界 ω3 冠军。<b>只能凉拌（忌高温）</b>、开封冷藏尽快吃完——双键越多越怕氧化。人体把 α-亚麻酸转成 EPA/DHA 的效率很低（~5%），所以深海鱼仍不可替代。'},
+ {n:'花生油/大豆油',d:'家常炒菜主力。注意 ω6（亚油酸）占比高，现代膳食整体 ω6 已偏多——<b>别再额外用"坚果油"追加 ω6</b>，重点是多吃 ω3（深海鱼、亚麻籽）。'},
+ {n:'菜籽油',d:'脂肪酸构成较均衡（MUFA 高、含一定 α-亚麻酸），烟点适中，是性价比与均衡度兼顾的家常选择。选"低芥酸"标准产品。'},
+ {n:'椰子油',d:'饱和脂肪 ≈90%，↑LDL；卖点是中链脂肪酸（MCT）供能快——但<b>椰子油本身 MCT 含量有限</b>，且 HDL 升高不等于心血管获益。风味菜偶尔用可以，别当保健品天天吃。'},
+ {n:'黄油/肥肉',d:'饱和脂肪高，↑LDL 证据明确。控制在总热量 10% 以内；用不饱和油<b>替换</b>（不是用精制碳水替换）是循证方向。'},
+ {n:'深海鱼（EPA/DHA）',d:'ω3 长链脂肪酸直接来源。<b>降 TG 证据最强</b>（高剂量用于高 TG 血症）；每周 2 次深海鱼替代红肉是最稳的吃法。鱼油补剂：高甘油三酯人群证据好，普通人一级预防证据一般。'},
+ {n:'反式脂肪（避雷）',d:'部分氢化油：植脂末、人造奶油、代可可脂、反复煎炸油。↑LDL + ↓HDL，<b>无安全下限</b>。 WHO 推动全球限量（ REPLACE 计划）。认准配料表，酥脆的加工零食是重灾区。'}
+];
+const oilBtns=$id('oilBtns');
+OILS.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.className='wbtn'+(i===0?' w-tab active':'');
+  b.textContent=s.n.split('（')[0];
+  b.addEventListener('click',()=>{
+    oilBtns.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    oilShow(i);
+  });
+  oilBtns.appendChild(b);
+});
+function oilShow(i){
+  const s=OILS[i];
+  $id('oilDetail').innerHTML='<b>'+s.n+'</b><br><span style="font-size:13.5px">'+s.d+'</span>';
+}
+oilShow(0);
+
+// ================= 自测 =================
+const quizzes=document.querySelectorAll('.quiz');
+let answered=0,score=0;
+quizzes.forEach(q=>{
+  q.querySelectorAll('.opt').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      if(q.classList.contains('done'))return;
+      q.classList.add('done');answered++;
+      const ok=btn.dataset.ok==='1';
+      if(ok){score++;btn.classList.add('right');}
+      else{btn.classList.add('wrong');
+        const r=q.querySelector('.opt[data-ok="1"]');if(r)r.classList.add('right');}
+      q.querySelector('.exp').style.display='block';
+    });
+  });
+});
+
+// 侧边栏高亮
+const links=[...document.querySelectorAll('nav.sidebar a')];
+const byId=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(a=>a.classList.remove('active'));
+      const l=byId.get(e.target.id);
+      if(l)l.classList.add('active');
+    }
+  });
+},{rootMargin:'-25% 0px -65% 0px'});
+document.querySelectorAll('main section[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
